@@ -128,6 +128,7 @@ Car &Car::lock()
 
 Car &Car::unlock()
 {
+  locked = false;
     return *this;
 }
 
