@@ -74,7 +74,8 @@ bool Car::has_passengers()
 // Calculates distance between two points.
 int Car::distance(double x1, double y1, double x2, double y2)
 {
-    return 0;
+	int euclDist = sqrt((pow((x1 - y1), 2.0) + (pow((x2 - y2), 2.0))));
+    return euclDist;
 }
 
 Car &Car::go_home()
