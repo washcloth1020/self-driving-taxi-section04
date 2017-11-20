@@ -61,14 +61,18 @@ bool Car::check_distance(std::vector<int> pickup, std::vector<int> dropoff)
     return true;
 }
 
-bool Car::is_home() 
+bool Car::is_home()
 {
     return false;
 }
 
-bool Car::has_passengers() 
+bool Car::has_passengers()
 {
-    return false;
+  if ( num_passengers > 0)
+  {
+    return true;
+  }
+  return false;
 }
 
 // Calculates distance between two points.
