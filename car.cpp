@@ -1,3 +1,4 @@
+
 #include "car.h"
 #include <string>
 #include <vector>
@@ -61,12 +62,12 @@ bool Car::check_distance(std::vector<int> pickup, std::vector<int> dropoff)
     return true;
 }
 
-bool Car::is_home() 
+bool Car::is_home()
 {
     return false;
 }
 
-bool Car::has_passengers() 
+bool Car::has_passengers()
 {
     return false;
 }
@@ -99,7 +100,12 @@ Car &Car::turn_on()
 
 Car &Car::turn_off()
 {
-    return *this;
+  if (on == false){
+	rpm = 0;
+	head_lights = false;
+	locked = true;
+  }
+return *this;
 }
 
 Car &Car::lock()
