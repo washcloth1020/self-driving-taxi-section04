@@ -139,5 +139,7 @@ Car &Car::charge(int duration)
 
 Car &Car::toggle_lights(bool exterior)
 {
-    return *this;
+  if (exterior==true){head_lights= !head_lights;}
+  else {interior_lights = !interior_lights;}
+  return *this;
 }
