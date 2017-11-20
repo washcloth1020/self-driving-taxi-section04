@@ -38,6 +38,14 @@ int Car::read_speed()
 
 Car &Car::shift()
 {
+  if (rpm>1000) {
+    gear++;
+    rpm=300;
+  }
+  else if (rpm<300) {
+    gear--;
+    rpm=1000;
+  }
     return *this;
 }
 
@@ -61,12 +69,12 @@ bool Car::check_distance(std::vector<int> pickup, std::vector<int> dropoff)
     return true;
 }
 
-bool Car::is_home() 
+bool Car::is_home()
 {
     return false;
 }
 
-bool Car::has_passengers() 
+bool Car::has_passengers()
 {
     return false;
 }
