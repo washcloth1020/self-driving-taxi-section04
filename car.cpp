@@ -119,6 +119,9 @@ return *this;
 
 Car &Car::lock()
 {
+    if (locked != true) {
+        locked = true;
+    }
     return *this;
 }
 
