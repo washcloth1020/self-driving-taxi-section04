@@ -39,6 +39,14 @@ int Car::read_speed()
 
 Car &Car::shift()
 {
+  if (rpm>1000) {
+    gear++;
+    rpm=300;
+  }
+  else if (rpm<300) {
+    gear--;
+    rpm=1000;
+  }
     return *this;
 }
 
